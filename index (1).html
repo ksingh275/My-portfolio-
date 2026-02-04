@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khushi Singh Portfolio</title>
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#111;
+  color:#d8b4fe;
+  overflow-x:hidden;
+}
+a { color:#d8b4fe; text-decoration:none; }
+h2 { margin-bottom:15px; }
+
+/* HERO */
+header {
+  text-align:center;
+  padding:80px 20px;
+}
+header h1 {
+  font-size:4rem;
+  color:#8b5cf6;
+  margin:10px 0;
+}
+header p {
+  font-size:1.5rem;
+  margin:10px 0 20px 0;
+}
+.btn {
+  padding:12px 30px;
+  background:#8b5cf6;
+  color:white;
+  border-radius:25px;
+  transition:0.3s;
+}
+.btn:hover { background:#6d28d9; cursor:pointer; }
+
+/* CARDS */
+section { padding:50px 20px; max-width:900px; margin:auto; }
+.card {
+  background:#1c1c1c;
+  padding:25px;
+  margin:25px 0;
+  border-radius:15px;
+  box-shadow:0px 6px 12px rgba(0,0,0,0.5);
+  transform: translateX(-100px);
+  opacity:0;
+  transition: all 0.7s ease-out;
+}
+.card.right { transform: translateX(100px); }
+
+/* BULLETS */
+ul { list-style-type: disc; padding-left:25px; }
+ul li { margin:8px 0; font-weight:bold; }
+
+/* FORM */
+form { display:flex; flex-direction:column; }
+form input, form textarea {
+  padding:10px;
+  margin:8px 0;
+  border-radius:10px;
+  border:none;
+  font-size:1rem;
+}
+form button {
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background-color:#8b5cf6;
+  color:white;
+  font-size:1rem;
+  margin-top:10px;
+  cursor:pointer;
+}
+form button:hover { background-color:#6d28d9; }
+
+/* PROJECT CARD */
+.project-card {
+  background:#222;
+  padding:20px;
+  border-radius:15px;
+  margin:15px 0;
+  cursor:pointer;
+  transition:0.4s;
+}
+.project-card:hover { background:#333; transform:translateY(-5px); }
+.project-desc { display:none; padding-top:10px; color:#d8b4fe; }
+.project-card.active .project-desc { display:block; }
+
+/* FOOTER */
+footer { text-align:center; padding:20px; color:#d8b4fe; }
+
+/* SLIDER ANIMATION */
+.show-left { transform:translateX(0); opacity:1; }
+.show-right { transform:translateX(0); opacity:1; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header>
+<h1>Khushi Singh</h1>
+<p>BCA Student | Aspiring Developer</p>
+<a href="#projects" class="btn">View My First Project</a>
+</header>
+
+<!-- ABOUT ME -->
+<section id="about">
+<div class="card">
+<h2>About Me</h2>
+<p>Hello! I am Khushi Singh from Gonda, Uttar Pradesh. I am a beginner developer pursuing BCA 1st Semester from Lovely Professional University. I enjoy coding, building websites, exploring technologies, and creating projects that combine logic and creativity. I aim to become a full-stack developer and keep learning step by step.</p>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<div class="card right">
+<h2>Education & Courses</h2>
+<ul>
+<li>10th → Maa Durga Inter College, Gonda, UP</li>
+<li>12th → Maa Durga Inter College, Gonda, UP</li>
+<li>BCA → 1st Semester, Lovely Professional University</li>
+<li>ADCA → Completed</li>
+<li>CCC → Completed</li>
+<li>Cyber Security Analyst → Forage</li>
+<li>Architecture Simulation → Forage</li>
+</ul>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="card">
+<h2>Skills</h2>
+<ul>
+<li>HTML → Beginner, building web pages</li>
+<li>CSS → Styling websites</li>
+<li>Python → Basic programming</li>
+<li>C → Fundamentals</li>
+<li>C++ → Object-oriented concepts</li>
+<li>Canva → Designing graphics & layouts</li>
+</ul>
+</div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+<div class="card right">
+<h2>Tools</h2>
+<ul>
+<li>💻 GitHub</li>
+<li>🔗 LinkedIn</li>
+<li>🖥️ VS Code</li>
+<li>🎨 Canva</li>
+</ul>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="card">
+<h2>Projects</h2>
+
+<div class="project-card" onclick="toggleProject(this)">
+<h3>Personal Portfolio Website</h3>
+<div class="project-desc">
+<p>This is my **first portfolio website** built using HTML, CSS, and JS. It showcases my skills, education, projects, and contact info in an interactive and elegant interface. Purple-on-black theme with slider animations makes it modern and professional.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="card right">
+<h2>Contact Me</h2>
+<p>Send me a message directly:</p>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+<ul>
+<li>📧 Email: ksingh839051@gmail.com</li>
+<li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/khushisingh555?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">khushisingh555</a></li>
+<li>🐱 GitHub: <a href="https://github.com/ksingh275" target="_blank">ksingh275</a></li>
+</ul>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Khushi Singh | Made with ❤️</p>
+</footer>
+
+<script>
+// Alternate slider animation
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', checkCards);
+function checkCards(){
+  const triggerBottom = window.innerHeight /5*4;
+  cards.forEach((card,index)=>{
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom){
+      if(index%2==0) card.classList.add('show-left');
+      else card.classList.add('show-right');
+    }
+  });
+}
+
+// Project card toggle
+function toggleProject(element){
+  element.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
